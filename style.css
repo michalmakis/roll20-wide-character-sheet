@@ -1,0 +1,64 @@
+@media (min-width: 1441px) {
+    body .container {
+        width: fit-content !important;
+    }
+}
+
+.charsheet .core .body  {
+  width: auto !important;
+  margin-top: 22px;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+.core .proficiencies .complex, 
+.core .traits .complex {
+    width: auto !important;
+}
+
+.core .col.col3 .traits {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  width: 100%; 
+}
+
+.core .col.col3 .repcontainer {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  width: 100%; 
+}
+
+.core .col.col3 .repitem {
+  flex: 1 1 347px !important;
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+
+.insp-prof-container span {
+  display: flex !important;
+}
+
+.col.col1 {
+    width: 247px;
+    flex-shrink: 0 !important;
+}
+
+.col.col2 {
+    width: 247px;
+    flex-shrink: 0 !important;
+}
+
+
+.col.col3 {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+.spells .col.col3 {
+    width: 247px;
+    flex-shrink: 0 !important;
+}
+
