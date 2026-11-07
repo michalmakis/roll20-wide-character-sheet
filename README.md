@@ -15,12 +15,52 @@ When you pop out a character sheet from Roll20 (right-click → "Pop out charact
 
 ## Installation
 
-1. Open Chrome (or a Chromium-based browser) and navigate to `chrome://extensions/`
+### Google Chrome
+
+1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable **Developer mode** (toggle in the top-right corner)
 3. Click **"Load unpacked"**
 4. Select this project's root directory
 
-The style will automatically apply to any popped-out character sheet at `https://app.roll20.net/editor/character/*`.
+The extension will automatically apply to any popped-out character sheet at `https://app.roll20.net/editor/character/*`.
+
+### Brave Browser
+
+#### Standard Installation (Windows / macOS / Linux .deb/.rpm)
+
+1. Open Brave and navigate to `brave://extensions/`
+2. Enable **Developer mode** (toggle in the top-right corner)
+3. Click **"Load unpacked"**
+4. Select this project's root directory
+
+#### Flatpak Installation
+
+If you installed Brave via Flatpak, the extension may not be able to access Roll20 pages due to sandbox restrictions. You have two options:
+
+**Option 1 — Grant filesystem access via Flatseal**
+
+1. Install [Flatseal](https://github.com/flathub/com.github.tchx84.Flatseal) if you haven't already:
+   ```bash
+   flatpak install flathub com.github.tchx84.Flatseal
+   ```
+2. Open Flatseal, select **Brave** from the list
+3. Under **Filesystem → Other files**, add:
+   ```
+   /home/YOUR_USERNAME/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/Default/Extensions
+   ```
+4. Restart Brave
+
+**Option 2 — Grant access via flatpak override**
+
+Run the following command in your terminal:
+
+```bash
+flatpak override --user --filesystem=host com.brave.Browser
+```
+
+This grants Brave full host filesystem access. After running the override, restart Brave and load the extension as described above.
+
+> **Note:** The `--filesystem=host` grant gives Brave broad filesystem access. If you prefer a more restrictive approach, use Flatseal to target only the necessary extension directory.
 
 ## Usage
 
